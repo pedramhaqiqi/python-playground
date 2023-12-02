@@ -93,7 +93,7 @@ def entropy_3D_uniform():
     P3 = P3[mask]
 
     # Calculate negative entropy for each (p1, p2) pair
-    Neg_Entropy = np.array([simplex_negative_entropy(p1, p2, p3) for p1, p2, p3 in zip(P1, P2, P3)])
+    Neg_Entropy = -1 * np.array([simplex_negative_entropy(p1, p2, p3) for p1, p2, p3 in zip(P1, P2, P3)])
 
     # Create a plot
     fig = plt.figure(figsize=(10, 8))
